@@ -1,14 +1,135 @@
-#img {
-  display: block;
-  margin: auto;
-  height: 128px;
-  width: 128px;
-  padding: 2rem;
+.container{
+  max-width: 25rem;
+ 
+  
+  
+  
 }
 
-#canvas {
+img{
+  width: 1.5rem;
+}
+ .icons {list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li{
+  padding-left: 10px;
+}
+.container-icon{
+  margin: auto;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./bg-wall.jpg);
+  height: 90vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card {
+  width: 15rem;
+  background-image: linear-gradient(163deg, #36b142ab 0%rgba(177, 66, 54, 0.589)36 100%);
+  border-radius: 20px;
+  transition: all .3s;
+ }
+ 
+ .card2 {
+  width: 15rem;
+ 
+  background-color: #1f5e669a;
+  /* border-radius:; */
+  transition: all .2s;
+ }
+ 
+ .card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+ }
+ 
+ .card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(14, 224, 112, 0.3);
+ }
+
+
+
+ #new-task-title {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(156, 8, 8, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+#new-task-title:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+             -13px -13px 100px #ffffff;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+button {
+  color: white;
+  padding: 1rem;
+  margin: auto auto;
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+button::before {
+  margin-left: auto;
+}
+
+button::after, button::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.753);
   display: block;
-  margin: 2rem auto;
-  width: 540px;
-  height: 540px;
+  transition: 0.7s;
+}
+
+button:hover::after, button:hover::before {
+  width: 100%;
+  
+}
+button:hover{
+  color: #b14336;
+}
+
+#list input[type="checkbox" i]  {
+  
+  margin: 0 1rem 0.5rem 0;
+}
+#list{
+  padding-bottom: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: white;
+  background-color:#072C35;
+  padding: 0 1rem 0.7rem;
 }
