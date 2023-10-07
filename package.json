@@ -6,6 +6,7 @@
     "build": "snowpack build"
   },
   "dependencies": {
+    "homepage":"https://github.com/ANIS303",
     "canvas-confetti": "^1.2.0",
     "uuid": "^9.0.0"
   },
