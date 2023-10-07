@@ -6,7 +6,7 @@
     "build": "snowpack build"
   },
   "dependencies": {
-    "homepage":"https://anis303.github.io/",
+    "homepage":"https://github.com/ANIS303/Todolist-ts",
     "canvas-confetti": "^1.2.0",
     "uuid": "^9.0.0"
   },
