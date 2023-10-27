@@ -32,18 +32,42 @@ form?.addEventListener("submit", e => {
 })
 
 function addListItem(task: Task) {
-  const item = document.createElement("li")
-  const label = document.createElement("label")
-  const checkbox = document.createElement("input")
+
+  const item = document.createElement("li");
+
+  // label and checkbox
+
+  const label = document.createElement("label");
+  const checkbox = document.createElement("input");
+
+  // delete button
+  const deleteBtn = document.createElement("button");
+  deleteBtn.innerText = "Delete";
+
+  deleteBtn.addEventListener("click", () => {
+    const index = tasks.findIndex(t => t.id === task.id);
+    tasks.splice(index, 1);
+    saveTasks();
+    item.remove();
+  });
+
   checkbox.addEventListener("change", () => {
-    task.completed = checkbox.checked
-    saveTasks()
-  })
-  checkbox.type = "checkbox"
-  checkbox.checked = task.completed
-  label.append(checkbox, task.title)
-  item.append(label)
-  list?.append(item)
+    task.completed = checkbox.checked;
+    saveTasks();
+  });
+
+  checkbox.type = "checkbox";
+  checkbox.checked = task.completed;
+
+  label.append(checkbox, task.title);
+
+  item.append(label);
+
+  // add delete button
+  item.append(deleteBtn);
+
+  list?.append(item);
+
 }
 
 function saveTasks() {
